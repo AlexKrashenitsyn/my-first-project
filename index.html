@@ -1,16 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First GitHub Project</title>
+  <title>Portfolio — Video Maker</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, alex!</h1>
-  <p>This is my first project with HTML, CSS and JavaScript.</p>
+  <div class="film-grain"></div>
 
-  <button onclick="sayHello()">Click me</button>
+  <nav class="nav">
+    <div class="nav-logo">VM</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Главная</a></li>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#work">Работы</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Video Maker & Cinematographer</p>
+      <h1 class="hero-title">Создаю<br><span class="gold">кино</span>, которое<br>остаётся с тобой</h1>
+      <p class="hero-desc">Превращаю идеи в визуальные истории. Коммерческие ролики, музыкальные клипы, кино.</p>
+      <a href="#work" class="btn">Смотреть работы</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">Обо мне</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Более 7 лет создаю видеоконтент, который цепляет зрителя с первых секунд. Специализируюсь на коммерческой съёмке, музыкальных клипах и документальном кино.</p>
+          <p>Мой подход — это внимание к деталям, работа со светом и композицией, которая превращает обычный кадр в произведение искусства.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="120">0</span>
+            <span class="stat-label">Проектов</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="40">0</span>
+            <span class="stat-label">Клиентов</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="7">0</span>
+            <span class="stat-label">Лет опыта</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section work">
+    <div class="container">
+      <h2 class="section-title">Работы</h2>
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="commercial">Коммерция</button>
+        <button class="filter-btn" data-filter="music">Клипы</button>
+        <button class="filter-btn" data-filter="cinema">Кино</button>
+      </div>
+      <div class="work-grid">
+        <div class="work-item" data-category="commercial">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Brand Film — Nike</h3>
+          <p>Коммерческий ролик</p>
+        </div>
+        <div class="work-item" data-category="music">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Music Video — Artist</h3>
+          <p>Музыкальный клип</p>
+        </div>
+        <div class="work-item" data-category="cinema">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Short Film — Echo</h3>
+          <p>Короткометражка</p>
+        </div>
+        <div class="work-item" data-category="commercial">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Product Launch — Apple</h3>
+          <p>Презентационный ролик</p>
+        </div>
+        <div class="work-item" data-category="music">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Live Session — Band</h3>
+          <p>Концертная съёмка</p>
+        </div>
+        <div class="work-item" data-category="cinema">
+          <div class="work-thumb">
+            <div class="work-play">&#9654;</div>
+          </div>
+          <h3>Documentary — City</h3>
+          <p>Документальное кино</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title">Услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#127909;</div>
+          <h3>Видеопродакшн</h3>
+          <p>Полный цикл производства: от сценария до финального рендера. Коммерческие ролики, презентации, имиджевые видео.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127908;</div>
+          <h3>Музыкальные клипы</h3>
+          <p>Креативная режиссура и съёмка клипов. Работа с концептом, светом, монтажом и цветокоррекцией.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127814;</div>
+          <h3>Цветокоррекция</h3>
+          <p>Профессиональный color grading. Создание уникального визуального стиля для вашего проекта.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128250;</div>
+          <h3>Монтаж</h3>
+          <p>Динамичный и ритмичный монтаж. Storytelling через кадры, звук и темп.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contact-content">
+        <p class="contact-text">Готов обсудить ваш проект. Свяжитесь со мной любым удобным способом.</p>
+        <div class="contact-links">
+          <a href="mailto:hello@videomaker.com" class="contact-link">hello@videomaker.com</a>
+          <a href="tel:+79000000000" class="contact-link">+7 (900) 000-00-00</a>
+          <div class="social-links">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">YouTube</a>
+            <a href="#" class="social-link">Vimeo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Video Maker Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
